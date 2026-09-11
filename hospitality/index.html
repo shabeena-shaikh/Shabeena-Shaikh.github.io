@@ -20,30 +20,32 @@ content="Shabeena Shaikh — Hospitality HR Professional specialising in HR oper
 <style>
 
 /* =========================================================
-   ROOT — GOLD / CREAM / BROWN / MUTED GREEN-GREY
+   ROOT — DEEP TEAL / CHAMPAGNE GOLD / WARM CREAM / GREY
 ========================================================= */
 
 :root{
 
-    --brown:#3A2A22;
-    --brown2:#4B382E;
-    --brown3:#60483A;
+    --teal:#174A4A;
+    --teal2:#236565;
 
-    --gold:#b58a55;
-    --gold2:#d4b07a;
+    --gold:#C5A46D;
+    --gold2:#DCC28E;
 
-    --cream:#f5f1e9;
-    --cream2:#ebe4d7;
+    --cream:#F5F1E8;
+    --cream2:#EAE4D8;
 
-    --white:#ffffff;
+    --white:#FFFFFF;
 
-    --muted:#70807e;
+    --muted:#70807E;
+    --grey:#566260;
+    --grey-light:#A5ACAA;
 
-    --text:#5F625F;
+    --text:#566260;
 
-    --border:rgba(58,42,34,.14);
+    --dark:#123838;
+    --border:rgba(23,74,74,.14);
 
-    --shadow:0 20px 50px rgba(58,42,34,.13);
+    --shadow:0 20px 55px rgba(23,74,74,.13);
 
 }
 
@@ -83,7 +85,7 @@ h4{
 
     font-family:"Playfair Display",serif;
 
-    color:var(--brown);
+    color:var(--teal);
 
     line-height:1.2;
 
@@ -129,9 +131,9 @@ header{
 
     z-index:1000;
 
-    background:rgba(245,241,233,.94);
+    background:rgba(245,241,232,.95);
 
-    backdrop-filter:blur(14px);
+    backdrop-filter:blur(16px);
 
     border-bottom:1px solid var(--border);
 
@@ -157,7 +159,7 @@ header{
 
     font-weight:600;
 
-    color:var(--brown);
+    color:var(--teal);
 
 }
 
@@ -183,7 +185,7 @@ header{
 
     font-weight:600;
 
-    color:var(--brown);
+    color:var(--teal);
 
     position:relative;
 
@@ -201,7 +203,7 @@ header{
 
     width:0;
 
-    height:1px;
+    height:2px;
 
     background:var(--gold);
 
@@ -239,21 +241,21 @@ header{
     background:
 
         radial-gradient(
-            circle at 82% 20%,
-            rgba(181,138,85,.12),
-            transparent 30%
+            circle at 85% 20%,
+            rgba(197,164,109,.20),
+            transparent 28%
         ),
 
         radial-gradient(
-            circle at 15% 80%,
-            rgba(235,228,215,.85),
-            transparent 35%
+            circle at 10% 85%,
+            rgba(35,101,101,.12),
+            transparent 32%
         ),
 
         linear-gradient(
             135deg,
-            #f5f1e9,
-            #ebe4d7
+            #F5F1E8,
+            #EAE4D8
         );
 
     display:flex;
@@ -268,7 +270,7 @@ header{
 
     grid-template-columns:1.05fr .95fr;
 
-    gap:80px;
+    gap:70px;
 
     align-items:center;
 
@@ -353,7 +355,7 @@ header{
 
 .btn-primary{
 
-    background:var(--brown);
+    background:var(--teal);
 
     color:white;
 
@@ -361,17 +363,19 @@ header{
 
 .btn-primary:hover{
 
-    background:var(--gold);
+    background:var(--teal2);
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(23,74,74,.2);
 
 }
 
 .btn-outline{
 
-    border:1px solid var(--brown);
+    border:1px solid var(--teal);
 
-    color:var(--brown);
+    color:var(--teal);
 
 }
 
@@ -381,13 +385,15 @@ header{
 
     border-color:var(--gold);
 
-    color:white;
+    color:var(--teal);
+
+    transform:translateY(-3px);
 
 }
 
 
 /* =========================================================
-   HERO IMAGE AREA
+   HERO IMAGE
    FULL IMAGE — NO CROPPING
 ========================================================= */
 
@@ -406,7 +412,7 @@ header{
 }
 
 
-/* Soft gold background circle */
+/* Gold decorative circle */
 
 .hero-image::after{
 
@@ -414,24 +420,24 @@ header{
 
     position:absolute;
 
-    width:460px;
+    width:440px;
 
-    height:460px;
+    height:440px;
 
     border-radius:50%;
 
-    background:rgba(181,138,85,.10);
+    background:rgba(197,164,109,.12);
 
-    right:calc(50% - 250px);
+    right:calc(50% - 245px);
 
-    top:-15px;
+    top:-10px;
 
     z-index:0;
 
 }
 
 
-/* Elegant gold offset frame */
+/* Gold offset frame */
 
 .hero-image::before{
 
@@ -447,16 +453,16 @@ header{
 
     top:20px;
 
-    right:calc(50% - 235px);
+    right:calc(50% - 230px);
 
-    opacity:.55;
+    opacity:.6;
 
     z-index:0;
 
 }
 
 
-/* FULL PHOTO — NO CROP */
+/* Main photo */
 
 .hero-image img{
 
@@ -474,11 +480,11 @@ header{
 
     border-radius:6px;
 
-    border:1px solid rgba(58,42,34,.14);
+    border:8px solid rgba(255,255,255,.75);
 
     box-shadow:
 
-        0 25px 55px rgba(58,42,34,.18);
+        0 30px 65px rgba(23,74,74,.20);
 
     z-index:1;
 
@@ -493,17 +499,17 @@ header{
 
     position:absolute;
 
-    background:rgba(255,255,255,.96);
+    background:rgba(255,255,255,.97);
 
     padding:18px 22px;
 
-    border-radius:4px;
+    border-radius:5px;
 
-    border:1px solid rgba(181,138,85,.25);
+    border:1px solid rgba(197,164,109,.35);
 
     box-shadow:
 
-        0 18px 40px rgba(58,42,34,.14);
+        0 18px 40px rgba(23,74,74,.15);
 
     z-index:2;
 
@@ -517,7 +523,7 @@ header{
 
     font-size:24px;
 
-    color:var(--brown);
+    color:var(--teal);
 
 }
 
@@ -551,7 +557,7 @@ header{
 
     right:-35px;
 
-    bottom:85px;
+    bottom:95px;
 
 }
 
@@ -568,7 +574,7 @@ header{
 
     transform:translateX(-50%);
 
-    background:var(--brown);
+    background:var(--teal);
 
     color:white;
 
@@ -584,7 +590,7 @@ header{
 
     z-index:3;
 
-    border-left:3px solid var(--gold);
+    border:1px solid var(--gold);
 
 }
 
@@ -599,7 +605,7 @@ header{
 
         grid-template-columns:1fr;
 
-        gap:50px;
+        gap:45px;
 
     }
 
@@ -619,9 +625,9 @@ header{
 
     .hero-image img{
 
-        width:min(380px,85vw);
+        width:min(390px,86vw);
 
-        height:min(470px,105vw);
+        height:min(490px,105vw);
 
         object-fit:contain;
 
@@ -629,11 +635,11 @@ header{
 
     .hero-image::before{
 
-        width:min(380px,85vw);
+        width:min(390px,86vw);
 
-        height:min(450px,105vw);
+        height:min(490px,105vw);
 
-        right:calc(50% - min(42.5vw,190px));
+        right:calc(50% - min(43vw,195px));
 
     }
 
@@ -663,7 +669,7 @@ header{
 
         left:0;
 
-        top:55px;
+        top:45px;
 
     }
 
@@ -671,7 +677,7 @@ header{
 
         right:0;
 
-        bottom:70px;
+        bottom:75px;
 
     }
 
@@ -767,7 +773,7 @@ section{
 
     font-size:25px;
 
-    color:var(--brown);
+    color:var(--teal);
 
     margin-bottom:30px;
 
@@ -792,7 +798,7 @@ section{
 
 .metrics{
 
-    background:var(--brown);
+    background:var(--teal);
 
     color:white;
 
@@ -812,7 +818,7 @@ section{
 
     padding:25px;
 
-    border-right:1px solid rgba(255,255,255,.15);
+    border-right:1px solid rgba(220,194,142,.3);
 
 }
 
@@ -842,7 +848,7 @@ section{
 
     letter-spacing:1.5px;
 
-    color:rgba(255,255,255,.7);
+    color:rgba(255,255,255,.72);
 
 }
 
@@ -858,7 +864,7 @@ section{
 
         border-right:none;
 
-        border-bottom:1px solid rgba(255,255,255,.15);
+        border-bottom:1px solid rgba(220,194,142,.25);
 
     }
 
@@ -945,6 +951,8 @@ section{
 
     box-shadow:var(--shadow);
 
+    border-color:rgba(197,164,109,.45);
+
 }
 
 .expertise-card:hover::before{
@@ -995,7 +1003,7 @@ section{
 
     letter-spacing:1.5px;
 
-    color:var(--brown);
+    color:var(--teal);
 
 }
 
@@ -1068,7 +1076,7 @@ section{
 
     width:1px;
 
-    background:var(--border);
+    background:rgba(197,164,109,.45);
 
 }
 
@@ -1104,13 +1112,13 @@ section{
 
 .timeline-content{
 
-    background:var(--cream2);
+    background:var(--cream);
 
     padding:30px;
 
-    border-radius:4px;
+    border-radius:5px;
 
-    border-left:3px solid var(--gold);
+    border:1px solid rgba(23,74,74,.08);
 
 }
 
@@ -1150,7 +1158,7 @@ section{
 
     font-family:"Playfair Display",serif;
 
-    color:var(--brown);
+    color:var(--teal);
 
     font-size:20px;
 
@@ -1230,7 +1238,7 @@ section{
 
     font-weight:600;
 
-    color:var(--brown);
+    color:var(--teal);
 
     transition:.3s;
 
@@ -1242,7 +1250,7 @@ section{
 
     border-color:var(--gold);
 
-    box-shadow:0 10px 25px rgba(58,42,34,.08);
+    box-shadow:0 10px 25px rgba(23,74,74,.08);
 
 }
 
@@ -1297,6 +1305,8 @@ section{
 
     box-shadow:var(--shadow);
 
+    border-color:rgba(197,164,109,.4);
+
 }
 
 .recognition-card span{
@@ -1346,7 +1356,7 @@ section{
 
 .education{
 
-    background:var(--cream2);
+    background:var(--cream);
 
 }
 
@@ -1415,11 +1425,63 @@ section{
 
 .contact{
 
-    background:var(--brown);
+    background:var(--teal);
 
     color:white;
 
     text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.contact::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border:1px solid rgba(197,164,109,.18);
+
+    border-radius:50%;
+
+    top:-250px;
+
+    right:-150px;
+
+}
+
+.contact::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border:1px solid rgba(197,164,109,.12);
+
+    border-radius:50%;
+
+    bottom:-180px;
+
+    left:-100px;
+
+}
+
+.contact .container{
+
+    position:relative;
+
+    z-index:1;
 
 }
 
@@ -1435,7 +1497,7 @@ section{
 
 .contact p{
 
-    color:rgba(255,255,255,.7);
+    color:rgba(255,255,255,.72);
 
     max-width:600px;
 
@@ -1451,7 +1513,7 @@ section{
 
 .contact .btn-outline{
 
-    border-color:rgba(255,255,255,.6);
+    border-color:var(--gold2);
 
     color:white;
 
@@ -1463,7 +1525,7 @@ section{
 
     border-color:var(--gold);
 
-    color:white;
+    color:var(--teal);
 
 }
 
@@ -1474,7 +1536,7 @@ section{
 
 footer{
 
-    background:#2B211B;
+    background:var(--dark);
 
     color:rgba(255,255,255,.65);
 
@@ -1497,9 +1559,9 @@ footer{
 
     inset:0;
 
-    background:rgba(43,33,27,.78);
+    background:rgba(18,56,56,.78);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(9px);
 
     display:none;
 
@@ -1527,7 +1589,7 @@ footer{
 
     overflow-y:auto;
 
-    background:#fff;
+    background:var(--white);
 
     padding:55px;
 
@@ -1537,7 +1599,9 @@ footer{
 
     box-shadow:
 
-        0 30px 80px rgba(0,0,0,.25);
+        0 30px 80px rgba(0,0,0,.28);
+
+    border-top:4px solid var(--gold);
 
     animation:popupIn .35s ease;
 
@@ -1577,11 +1641,11 @@ footer{
 
     border-radius:50%;
 
-    border:1px solid var(--border);
+    border:1px solid rgba(23,74,74,.15);
 
-    background:white;
+    background:var(--cream);
 
-    color:var(--brown);
+    color:var(--teal);
 
     font-size:20px;
 
@@ -1593,9 +1657,11 @@ footer{
 
 .popup-close:hover{
 
-    background:var(--brown);
+    background:var(--teal);
 
     color:white;
+
+    border-color:var(--teal);
 
 }
 
@@ -1665,11 +1731,11 @@ footer{
 
     padding:18px 20px;
 
-    background:var(--cream2);
+    background:var(--cream);
 
     border-left:3px solid var(--gold);
 
-    color:var(--brown);
+    color:var(--teal);
 
     font-size:13px;
 
@@ -1728,7 +1794,7 @@ footer{
 
 
 /* =========================================================
-   FOCUS ACCESSIBILITY
+   ACCESSIBILITY
 ========================================================= */
 
 .expertise-card:focus{
@@ -1815,8 +1881,6 @@ Shabeena Shaikh<span>.</span>
 
 <div class="container hero-grid">
 
-
-<!-- HERO TEXT -->
 
 <div class="hero-content reveal">
 
@@ -2884,6 +2948,7 @@ id="popupFocus">
 
 <script>
 
+
 /* =========================================================
    EXPERTISE POPUP CONTENT
 ========================================================= */
@@ -3230,6 +3295,7 @@ function openPopup(number){
 }
 
 
+
 /* =========================================================
    CLOSE POPUP
 ========================================================= */
@@ -3243,6 +3309,7 @@ function closePopup(){
     document.body.style.overflow = "";
 
 }
+
 
 
 /* =========================================================
@@ -3265,6 +3332,7 @@ function handleCardKey(event,number){
 }
 
 
+
 /* =========================================================
    CLOSE POPUP OUTSIDE
 ========================================================= */
@@ -3282,6 +3350,7 @@ document
     });
 
 
+
 /* =========================================================
    ESCAPE KEY
 ========================================================= */
@@ -3295,6 +3364,7 @@ document.addEventListener("keydown",function(event){
     }
 
 });
+
 
 
 /* =========================================================
@@ -3394,10 +3464,6 @@ function startCounters(){
 
 
 
-/* =========================================================
-   METRIC OBSERVER
-========================================================= */
-
 const metricObserver =
     new IntersectionObserver(
 
@@ -3433,6 +3499,7 @@ if(metricsSection){
     metricObserver.observe(metricsSection);
 
 }
+
 
 </script>
 
